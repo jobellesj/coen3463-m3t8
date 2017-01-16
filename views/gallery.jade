@@ -1,0 +1,304 @@
+doctype transitional
+//
+  Template Name: PhotoFolio
+  Author: <a href="http://www.os-templates.com/">OS Templates</a>
+  Author URI: http://www.os-templates.com/
+  Licence: Free to use under our free template licence terms
+  Licence URI: http://www.os-templates.com/template-terms
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    title TOP TED TALKS | Category Gallery
+    meta(http-equiv='Content-Type', content='text/html; charset=iso-8859-1')
+    link(rel='stylesheet', href='/stylesheets/layout.css', type='text/css')
+    script(type='text/javascript', src='/javascriptsscripts/jquery.min.js')
+    // tabs
+    script(type='text/javascript', src='/javascripts/jquery.ui.min.js')
+    script(type='text/javascript').
+      $(document).ready(function () {
+      $("#tabcontainer").tabs({
+      event: "click"
+      });
+      });
+    // / tabs
+    // prettyPhoto
+    link(rel='stylesheet', href='/javascripts/prettyphoto/prettyPhoto.css', type='text/css')
+    script(type='text/javascript', src='/javascripts/prettyphoto/jquery.prettyPhoto.js')
+    script(type='text/javascript').
+      $(document).ready(function() {
+      $("a[rel^='prettyPhoto']").prettyPhoto({
+      theme: 'dark_rounded',
+      overlay_gallery: false,
+      social_tools: false
+      });
+      });
+    // / prettyPhoto
+  body#top
+    .wrapper.col1
+      #header.clear
+        #header.clear
+          .fl_left
+            h1
+              img(src='./images/logo.png', height='50px', width='180 px', a='', href='index')
+              br
+              p(style='font-family:arial;') Ideas Worth Spreading
+              br
+              br
+          .fl_right
+            a(href='#')
+              img(src='./images/demo/468x60.gif', alt='')
+      // #######################################################################################################
+      .wrapper.col1
+        #topbar.clear
+          ul#topnav
+            li
+              a(href='index') Home
+            li
+              a(href='tedtalkslist') List of ted talks
+            li
+              a(href='tedtalks') Add New
+            li.active.last
+              a(href='gallery') Category Gallery
+      // #######################################################################################################
+      .wrapper.col2
+        #container.clear
+          // #######################################################################################################
+          #tabcontainer
+            center
+              ul#tabnav
+                li
+                  a(href='#tabs-1') Educational
+                li
+                  a(href='#tabs-2') Science & Technology
+                li
+                  a(href='#tabs-3') Entertainment
+                li
+                  a(href='#tabs-4') Motivational
+            // ###########
+            #tabs-1.gallery.clear
+              ul
+                li
+                  a(href='./images/n1.jpg', rel='prettyPhoto[gallery1]', title='Image 1')
+                    img(src='./images/n1.jpg', alt='Educational Category')
+                li
+                  a(href='./images/e1.jpg', rel='prettyPhoto[gallery1]', title='Image 2')
+                    img(src='./images/e1.jpg', alt='Educational Category')
+                li
+                  a(href='./images/e2.jpg', rel='prettyPhoto[gallery1]', title='Image 3')
+                    img(src='./images/e2.jpg', alt='Educational Category')
+                li
+                  a(href='./images/e3.jpg', rel='prettyPhoto[gallery1]', title='Image 4')
+                    img(src='../images/e3.jpg', alt='Educational Category')
+                li
+                  a(href='./images/e4.jpg', rel='prettyPhoto[gallery1]', title='Image 5')
+                    img(src='./images/e4.jpg', alt='Educational Category')
+                li.last
+                  a(href='./images/e5.jpg', rel='prettyPhoto[gallery1]', title='Image 6')
+                    img(src='./images/e5.jpg', alt='Title Text')
+                li
+                  a(href='./images/e6.jpg', rel='prettyPhoto[gallery1]', title='Image 7')
+                    img(src='./images/e6.jpg', alt='Educational Category')
+                li
+                  a(href='./images/e7.png', rel='prettyPhoto[gallery1]', title='Image 8')
+                    img(src='./images/e7.png', alt='Educational Category')
+                li
+                  a(href='./images/e8.png', rel='prettyPhoto[gallery1]', title='Image 9')
+                    img(src='./images/e8.png', alt='Educational Category')
+                li
+                  a(href='./images/e9.jpg', rel='prettyPhoto[gallery1]', title='Image 10')
+                    img(src='./images/e9.jpg', alt='Educational Category')
+                li
+                  a(href='./images/e10.jpg', rel='prettyPhoto[gallery1]', title='Image 11')
+                    img(src='./images/e10.jpg', alt='Educational Category')
+                li.last
+                  a(href='./images/e11.jpg', rel='prettyPhoto[gallery1]', title='Image 12')
+                    img(src='./images/e11.jpg', alt='Educational Category')
+            // ###########
+            #tabs-2.gallery.clear
+              ul
+                li
+                  a(href='./images/n2.jpg', rel='prettyPhoto[gallery2]', title='Image 1')
+                    img(src='./images/n2.jpg', alt='S & T Category')
+                li
+                  a(href='./images/11.jpg', rel='prettyPhoto[gallery2]', title='Image 2')
+                    img(src='./images/11.jpg', alt='S & T Category')
+                li
+                  a(href='./images/12.jpg', rel='prettyPhoto[gallery2]', title='Image 3')
+                    img(src='./images/12.jpg', alt='S & T Category')
+                li
+                  a(href='./images/13.jpg', rel='prettyPhoto[gallery2]', title='Image 4')
+                    img(src='./images/13.jpg', alt='S & T Category')
+                li
+                  a(href='./images/14.jpg', rel='prettyPhoto[gallery2]', title='Image 5')
+                    img(src='./images/14.jpg', alt='S & T Category')
+                li.last
+                  a(href='./images/22.jpg', rel='prettyPhoto[gallery2]', title='Image 6')
+                    img(src='./images/22.jpg', alt='S & T Categoryt')
+                li
+                  a(href='./images/15.jpg', rel='prettyPhoto[gallery2]', title='Image 7')
+                    img(src='./images/15.jpg', alt='S & T Category')
+                li
+                  a(href='./images/16.jpg', rel='prettyPhoto[gallery2]', title='Image 8')
+                    img(src='./images/16.jpg', alt='S & T Category')
+                li
+                  a(href='./images/17.jpg', rel='prettyPhoto[gallery2]', title='Image 9')
+                    img(src='./images/17.jpg', alt='S & T Category')
+                li
+                  a(href='./images/18.jpg', rel='prettyPhoto[gallery2]', title='Image 10')
+                    img(src='./images/18.jpg', alt='S & T Category')
+                li
+                  a(href='./images/19.jpg', rel='prettyPhoto[gallery2]', title='Image 11')
+                    img(src='./images/19.jpg', alt='S & T Category')
+                li.last
+                  a(href='./images/20.jpg', rel='prettyPhoto[gallery2]', title='Image 12')
+                    img(src='./images/20.jpg', alt='S & T Category')
+            // ###########
+            #tabs-3.gallery.clear
+              ul
+                li
+                  a(href='./images/n3.jpg', rel='prettyPhoto[gallery3]', title='Image 1')
+                    img(src='./images/n3.jpg', alt='Entertainment Category')
+                li
+                  a(href='./images/10.jpg', rel='prettyPhoto[gallery3]', title='Image 2')
+                    img(src='./images/10.jpg', alt='Entertainment Category')
+                li
+                  a(href='./images/9.jpg', rel='prettyPhoto[gallery3]', title='Image 3')
+                    img(src='./images/9.jpg', alt='Entertainment Category')
+                li
+                  a(href='./images/8.jpg', rel='prettyPhoto[gallery3]', title='Image 4')
+                    img(src='./images/8.jpg', alt='Entertainment Category')
+                li
+                  a(href='./images/7.jpg', rel='prettyPhoto[gallery3]', title='Image 5')
+                    img(src='./images/7.jpg', alt='Entertainment Category')
+                li.last
+                  a(href='./images/15.jpg', rel='prettyPhoto[gallery3]', title='Image 6')
+                    img(src='./images/15.jpg', alt='Entertainment Category')
+                li
+                  a(href='./images/6.jpg', rel='prettyPhoto[gallery3]', title='Image 7')
+                    img(src='./images/6.jpg', alt='Entertainment Category')
+                li
+                  a(href='./images/5.jpg', rel='prettyPhoto[gallery3]', title='Image 8')
+                    img(src='./images/5.jpg', alt='Entertainment Category')
+                li
+                  a(href='./images/4.jpg', rel='prettyPhoto[gallery3]', title='Image 9')
+                    img(src='./images/4.jpg', alt='Entertainment Category')
+                li
+                  a(href='./images/3.jpg', rel='prettyPhoto[gallery3]', title='Image 10')
+                    img(src='./images/3.jpg', alt='Entertainment Category')
+                li
+                  a(href='../images/2.jpg', rel='prettyPhoto[gallery3]', title='Image 11')
+                    img(src='../images/2.jpg', alt='Entertainment Category')
+                li.last
+                  a(href='./images/1.jpg', rel='prettyPhoto[gallery3]', title='Image 12')
+                    img(src='./images/1.jpg', alt='Entertainment Category')
+            // ###########
+            #tabs-4.gallery.clear
+              ul
+                li
+                  a(href='./images/n4.jpg', rel='prettyPhoto[gallery4]', title='Image 1')
+                    img(src='./images/n4.jpg', alt='Motivational Category')
+                li
+                  a(href='./images/1.jpg', rel='prettyPhoto[gallery4]', title='Image 2')
+                    img(src='./images/1.jpg', alt='Motivational Category')
+                li
+                  a(href='./images/6.jpg', rel='prettyPhoto[gallery4]', title='Image 3')
+                    img(src='./images/6.jpg', alt='Motivational Category')
+                li
+                  a(href='./images/8.jpg', rel='prettyPhoto[gallery4]', title='Image 4')
+                    img(src='./images/8.jpg', alt='Motivational Category')
+                li
+                  a(href='./images/22.jpg', rel='prettyPhoto[gallery4]', title='Image 5')
+                    img(src='./images/22.jpg', alt='Motivational Category')
+                li.last
+                  a(href='./images/11.jpg', rel='prettyPhoto[gallery4]', title='Image 6')
+                    img(src='./images/11.jpg', alt='Motivational Category')
+                li
+                  a(href='./images/12.jpg', rel='prettyPhoto[gallery4]', title='Image 7')
+                    img(src='./images/12.jpg', alt='Motivational Categoryt')
+                li
+                  a(href='./images/19.jpg', rel='prettyPhoto[gallery4]', title='Image 8')
+                    img(src='./images/19.jpg', alt='Motivational Category')
+                li
+                  a(href='./images/17.jpg', rel='prettyPhoto[gallery4]', title='Image 9')
+                    img(src='./images/17.jpg', alt='Motivational Category')
+                li
+                  a(href='./images/2.jpg', rel='prettyPhoto[gallery4]', title='Image 10')
+                    img(src='./images/2.jpg', alt='Motivational Category')
+                li
+                  a(href='./images/16.jpg', rel='prettyPhoto[gallery4]', title='Image 11')
+                    img(src='./images/16.jpg', alt='Motivational Category')
+                li.last
+                  a(href='./images/14.jpg', rel='prettyPhoto[gallery4]', title='Image 12')
+                    img(src='../images/14.jpg', alt='Motivational Category')
+            // ##########
+            // ###########
+          // #######################################################################################################
+          // #######################################################################################################
+      // #######################################################################################################
+      .wrapper
+        #footer.clear
+          .footbox
+            h2
+              | About Us 
+              img(src='./images/logo.png', height='50px', width='180 px', a='', href='index.html')
+            p
+              | TED is a nonprofit devoted to spreading ideas, usually in the form of short, powerful talks (18 minutes or less). TED began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all topics
+            p
+              | from science to business to global issues  in more than 100 languages. Meanwhile, independently run TEDx events help share ideas in communities around the world.
+          .footbox
+            h2 Programs & Initiatives 
+            ul
+              li
+                a(href='https://www.ted.com/about/programs-initiatives/tedx-program') TEDx
+              li
+                a(href='https://www.ted.com/about/programs-initiatives/ted-prize') TED Prize
+              li
+                a(href='https://www.ted.com/about/programs-initiatives/ted-fellows-program') TED Fellows 
+              li
+                a(href='https://www.ted.com/about/programs-initiatives/ted-ed') TED Ed
+              li
+                a(href='https://www.ted.com/about/programs-initiatives/ted-translators') TED Translators
+              li
+                a(href='https://www.ted.com/about/programs-initiatives/ted-books') TED Booksc
+              li.last
+                a(href='https://www.ted.com/about/programs-initiatives/ted-institute') TED Institutes
+          .footbox
+            h2 Ways to get TED
+            ul
+              li
+                a(href='http://www.npr.org/programs/ted-radio-hour/') TED Radio Hour on NPR
+              li.last
+                a(href='https://www.ted.com/about/programs-initiatives/ted-talks/ways-to-get-ted-talks') More ways to get TED
+          .footbox.last
+            h2 Keep in Touch
+            ul
+              li
+                a(href='https://www.facebook.com/TED') Check out our Facebook page
+              li
+                a(href='https://twitter.com/tedtalks') Get the latest Tweets
+              li
+                a(href='https://www.pinterest.com/tednews/') Pinterest
+              li
+                a(href='https://www.instagram.com/ted/') View our Instagram profile
+            h2 Contact Us
+            ul
+              li
+                strong.title Tel:
+                br
+                |           212.346.9333
+              li
+                strong.title Fax:
+                br
+                |           718.744.2142
+              li
+                strong.title Email:
+                br
+                | registration@ted.com
+      // #######################################################################################################
+      .wrapper
+        #copyright.clear
+          p.fl_left
+            | Copyright © 2016 - All Rights Reserved - 
+            a(href='#') TOP TED TALKS
+          p.fl_right
+            | Created by 
+            a(target='_blank', href='http://coen3463-m1t8.herokuapp.com/') Jocelle L. Tanqui-on & Jobelle H. San Juan
