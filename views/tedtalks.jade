@@ -1,0 +1,174 @@
+doctype transitional
+//
+  Template Name: PhotoFolio
+  Author: <a href="http://www.os-templates.com/">OS Templates</a>
+  Author URI: http://www.os-templates.com/
+  Licence: Free to use under our free template licence terms
+  Licence URI: http://www.os-templates.com/template-terms
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    title TOP TED TALKS | HOME
+    meta(http-equiv='Content-Type', content='text/html; charset=iso-8859-1')
+    link(rel='stylesheet', href='stylesheets/layout.css', type='text/css')
+    script(type='text/javascript', src='javascripts/jquery.min.js')
+    // tabs
+    script(type='text/javascript', src='javascripts/jquery.ui.min.js')
+    script(type='text/javascript').
+      $(document).ready(function () {
+      $("#tabcontainer").tabs({
+      event: "click"
+      });
+      });
+    // / tabs
+    script(type='text/javascript', src='javascripts/jquery-photostack.js')
+    // coinslider
+    script(type='text/javascript', src='javascripts/jquery-coin-slider.min.js')
+    script(type='text/javascript').
+      $(document).ready(function () {
+      $('#portfolioslider').coinslider({
+      width: 480,
+      height: 280,
+      navigation: false,
+      links: false,
+      hoverPause: true
+      });
+      });
+    // / coinslider
+  body#top
+    .wrapper.col1
+      #header.clear
+        .fl_left
+          h1
+            img(src='./images/logo.png', height='50px', width='180 px', a='', href='index')
+            p(style='font-family:arial;') Ideas Worth Spreading
+        .fl_right
+          a(href='#')
+    // #######################################################################################################
+    .wrapper.col1
+      #topbar.clear
+        ul#topnav
+          li.active
+            a(href='index') Home
+          li
+            a(href='tedtalkslist') List of TED Talks
+          li
+            a(href='tedtalks') Add New 
+          li.last
+            a(href='gallery') Category Gallery
+    center
+      img(src='./images/banner2.jpg')
+    br
+    br
+    // #######################################################################################################
+    .wrapper.col2
+      #container.clear
+        // #######################################################################################################
+      center  
+        h5 Add New Entry for Ted Talks
+          form(method="POST", action="/tedtalks")
+            p
+              input(type="text", placeholder="Title", name="title", required='', aria-required='true')
+            p
+              input(type="text", placeholder="Uploader Name", name="uploader_name", required='', aria-required='true')
+            p
+              input(type="text", placeholder="Youtube Page", name="youtube_page", required='', aria-required='true')
+            p
+              input(type="text", placeholder="Youtube Link", name="youtube_link", required='', aria-required='true')  
+            p
+              input(type="text", placeholder="Description", name="description", required='', aria-required='true')
+            p
+              input(type="text", placeholder="Publish Date", name="pub_date", required='', aria-required='true')
+            p
+              input(type="text", placeholder="Category", name="category", required='', aria-required='true')
+            p
+              input(type="text", placeholder="Number of Views", name="views", required='', aria-required='true')
+            p
+              input(type="text", placeholder="Number of Likes", name="likes", required='', aria-required='true')
+            p
+              input(type="text", placeholder="Embedded Video", name="embedded", required='', aria-required='true')  
+      
+            button(type="submit") Submit
+            br
+            br
+        // #######################################################################################################
+    // #######################################################################################################
+    .wrapper
+      #footer.clear
+        .footbox
+          h2 About Us
+          p
+            | Lornunc tincidunt nec nequat risus convallisis elit vestiquat justo et volutpat. Urnanec monterdum turistibus semportis non vivamus justo pellus ac integestiquat eros. Turet cursuspend ero nulla dapienteger quisque nullamcorper lorem in ut pellus.
+          p
+            | Atmaecenas nec non nam nullamcorper magna id id nisl ac in. Sedfauctortis fuscetus estibus gravida id dui curabitur commodo facilisi loborttitorttitor vitae.
+        .footbox
+          h2 Our Skillset
+          ul
+            li
+              a(href='#') Lorem ipsum dolor sit
+            li
+              a(href='#') Amet consectetur
+            li
+              a(href='#') Praesent vel sem id
+            li
+              a(href='#') Curabitur hendrerit est
+            li
+              a(href='#') Aliquam eget erat nec sapien
+            li
+              a(href='#') Cras id augue nunc
+            li
+              a(href='#') In nec justo non
+            li
+              a(href='#') Vivamus mollis enim ut
+            li.last
+              a(href='#') Sed a nulla urna
+        .footbox
+          h2 Blog Links
+          ul
+            li
+              a(href='#') Lorem ipsum dolor sit
+            li
+              a(href='#') Amet consectetur
+            li
+              a(href='#') Praesent vel sem id
+            li
+              a(href='#') Curabitur hendrerit est
+            li
+              a(href='#') Aliquam eget erat nec sapien
+            li
+              a(href='#') Cras id augue nunc
+            li
+              a(href='#') In nec justo non
+            li
+              a(href='#') Vivamus mollis enim ut
+            li.last
+              a(href='#') Sed a nulla urna
+        .footbox.last
+          h2 Keep in Touch
+          ul
+            li
+              a(href='#') Check out our Facebook page
+            li
+              a(href='#') Get the latest Tweets
+            li
+              a(href='#') Grab our latest Deviants
+            li
+              a(href='#') View our LinkedIn profile
+          h2 Contact Us
+          ul
+            li
+              strong.title Tel:
+              br
+              |           xxxxx xxxxxxxxxx
+            li
+              strong.title Email:
+              br
+              a(href='#') contact@mydomain.com
+    // #######################################################################################################
+    .wrapper
+      #copyright.clear
+        p.fl_left
+          | Copyright © 2014 - All Rights Reserved - 
+          a(href='#') Domain Name
+        p.fl_right
+          | Template by 
+          a(target='_blank', href='http://www.os-templates.com/', title='Free Website Templates') OS Templates

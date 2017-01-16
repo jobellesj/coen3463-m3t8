@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1 Edit Content
+	form(method="POST", action="/student/:studentId/edit")
+    p
+      input(type="text", value="#{student.first_name}", name="first_name")
+    p
+      input(type="text", value="#{student.last_name}", name="last_name")
+    p
+      input(type="text", value="#{student.email}", name="email")
+    p
+      input(type="hidden", value="PUT", name="_method")
+    p
+    button(type="submit") Submit

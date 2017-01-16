@@ -1,0 +1,407 @@
+doctype transitional
+//
+  Template Name: PhotoFolio
+  Author: <a href="http://www.os-templates.com/">OS Templates</a>
+  Author URI: http://www.os-templates.com/
+  Licence: Free to use under our free template licence terms
+  Licence URI: http://www.os-templates.com/template-terms
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    title TOP TED TALKS | HOME
+    meta(http-equiv='Content-Type', content='text/html; charset=iso-8859-1')
+    link(rel='stylesheet', href='stylesheets/layout.css', type='text/css')
+    script(type='text/javascript', src='javascripts/jquery.min.js')
+    // tabs
+    script(type='text/javascript', src='javascripts/jquery.ui.min.js')
+    script(type='text/javascript').
+      $(document).ready(function () {
+      $("#tabcontainer").tabs({
+      event: "click"
+      });
+      });
+    // / tabs
+    script(type='text/javascript', src='javascripts/jquery-photostack.js')
+    // coinslider
+    script(type='text/javascript', src='javascripts/jquery-coin-slider.min.js')
+    script(type='text/javascript').
+      $(document).ready(function () {
+      $('#portfolioslider').coinslider({
+      width: 480,
+      height: 280,
+      navigation: false,
+      links: false,
+      hoverPause: true
+      });
+      });
+    // / coinslider
+  body#top
+    .wrapper.col1
+      #header.clear
+        .fl_left
+          h1
+            img(src='./images/logo.png', height='50px', width='180 px', a='', href='index')
+            p(style='font-family:arial;') Ideas Worth Spreading
+        .fl_right
+          a(href='#')
+    // #######################################################################################################
+    .wrapper.col1
+      #topbar.clear
+        ul#topnav
+          li.active
+            a(href='index') Home
+          li
+            a(href='tedtalkslist') List of TED Talks
+          li
+            a(href='tedtalks') Add New 
+          li.last
+            a(href='gallery') Category Gallery
+    center
+      img(src='./images/banner2.jpg')
+    br
+    br
+    // #######################################################################################################
+    .wrapper.col1
+      #featured_slide
+        // #######################################################################################################
+        #slider
+          ul#categories
+            li.category
+              h2 Sir Ken Robinson
+              a(href='pages/v1.html')
+                img(src='images/1.jpg', alt='')
+              p
+                | Sir Ken Robinson makes an entertaining and profoundly moving case for creating an education system that nurtures (rather than undermines) creativity. 
+                br
+            li.category
+              h2 Jill Bolte Taylor
+              a(href='pages/v2.html')
+                img(src='images/2.jpg', alt='')
+              p
+                | Neuroanatomist Jill Bolte Taylor had an opportunity few brain scientists would wish for: One morning,she realized she was having a massive stroke. As it happened
+            li.category
+              h2 Pranav Mistry
+              a(href='pages/v3.html')
+                img(src='images/3.jpg', alt='')
+              p
+                | At TEDIndia, Pranav Mistry demos several tools that help the physical world interact with the worldof data -- including a deep look at his SixthSense device and a new, paradigm-shifting paper "laptop."
+            li.category
+              h2 David Gallo
+              a(href='pages/v4.html')
+                img(src='images/4.jpg', alt='')
+              p
+                | David Gallo shows jaw-dropping footage of amazing sea creatures,ncluding a color-shifting cuttlefish, a perfectly camouflaged octopus.
+            li.category
+              h2 Pattie Maes
+              a(href='pages/v5.html')
+                img(src='images/5.jpg', alt='')
+              p
+                | from Pattie Maes' lab at MIT, spearheaded by Pranav Mistry -- was the buzz of TED. It's a wearable evice with a projector that paves the way for profound interaction with our environment.
+            li.category
+              h2 Tony Robbins
+              a(href='pages/v6.html')
+                img(src='images/6.jpg', alt='')
+              p
+                | Tony Robbins' lab at ZET, spearheaded by Tony RObbins -- was the buzz of TED. It's a wearabledevice with a projector that paves the way for profound interaction with our environment.
+            li.category
+              h2 Simon Sinek
+              a(href='pages/v7.html')
+                img(src='images/7.jpg', alt='')
+              p
+                | Simon Sinex has been a great motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Steve Job
+              a(href='pages/v8.html')
+                img(src='images/8.jpg', alt='')
+              p
+                | Steve Job has been a great creator of APPLE Companythats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Hans Roslings
+              a(href='pages/v9.html')
+                img(src='images/9.jpg', alt='')
+              p
+                | Hans Rosling has been a great Motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Brené Brown 
+              a(href='pages/v10.html')
+                img(src='images/10.jpg', alt='')
+              p
+                | Brene Brown has been a great Motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Dan Pink
+              a(href='pages/v11.html')
+                img(src='images/11.jpg', alt='')
+              p
+                | Dan Pink has been a great Motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Arthur Benjamin
+              a(href='pages/v12.html')
+                img(src='images/12.jpg', alt='')
+              p
+                | Arthur Benjamin has been a great Motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Elizabeth Gilbert
+              a(href='pages/v13.html')
+                img(src='images/13.jpg', alt='')
+              p
+                | Elizabeth Gilbert has been a great Motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Dan Gilbert
+              a(href='pages/v14.html')
+                img(src='images/14.jpg', alt='')
+              p
+                | Dan Gilbert has been a great Motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Stephen Hawking
+              a(href='pages/v15.html')
+                img(src='images/15.jpg', alt='')
+              p
+                | Stephen Hawking has been a great Motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Jeff Han
+              a(href='pages/v16.html')
+                img(src='images/16.jpg', alt='')
+              p
+                | Jeff Han has been a great Motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Johnny Lee
+              a(href='pages/v17.html')
+                img(src='images/17.jpg', alt='')
+              p
+                | Johnny Lee has been a great Motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Keith Barry
+              a(href='pages/v18.html')
+                img(src='images/18.jpg', alt='')
+              p
+                | Keith Barry has been a great Motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Mary Roach
+              a(href='pages/v19.html')
+                img(src='images/19.jpg', alt='')
+              p
+                | Mary Roach has been a great Motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Vijay Kumar
+              a(href='pages/v20.html')
+                img(src='images/20.jpg', alt='')
+              p
+                | Vijay Kumar has been a great Motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Robyn  DeLuca
+              a(href='pages/v21.html')
+                img(src='images/21.jpg', alt='')
+              p
+                | Robyn  DeLuca has been a great Motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+            li.category
+              h2 Sophie Scot
+              a(href='pages/v22.html')
+                img(src='images/22.jpg', alt='')
+              p
+                | Sophie Scot has been a great Motivational speaker thats why
+                | its not new that he get to talk to the most viewd Talk show the TED Talk
+          a.prev.disabled
+          a.next.disabled
+          div(style='clear:both')
+        // #######################################################################################################
+    // #######################################################################################################
+    .wrapper.col2
+      #container.clear
+        // #######################################################################################################
+        #tabcontainer
+          center
+            ul#tabnav
+              li
+                a(href='#tabs-1') Our Services
+              li
+                a(href='#tabs-2') Latest TED Talk Videos
+              li
+                a(href='#tabs-3') Portfolio Example
+              li
+                a(href='#tabs-4') Our Profile 
+          #tabs-1.tabcontainer
+            #hpage_services.clear
+              .block
+                img(src='images/logo.png', height='56 px', width='96 px', alt='')
+                strong History of TED
+                p
+                  | TED was born in 1984 out of Richard Saul Wurman's observation of a powerful convergence among three fields: technology, entertainment and design. The first TED included a demo of the compact disc, the e-book and cutting-edge 3D graphics from Lucasfilm, while mathematician Benoit Mandelbrot demonstrated how to map coastlines using his developing theory of fractal geometry.  
+                  a(href='https://www.ted.com/about/our-organization/history-of-ted')
+                  | .
+              .block
+                img(src='images/logo2.jpg', height='56 px', width='96 px', alt='')
+                strong How TED works 
+                p
+                  | TED is owned by a nonprofit, nonpartisan foundation. Our agenda is to make great ideas accessible and spark conversation. Everything we do — from our TED Talks videos to the projects sparked by the TED Prize, from the global TEDx community to the TED-Ed lesson series — is driven by this goal: How can we best spread great ideas?
+              .block.last
+                img(src='images/logo3.jpg', height='56 px', width='96 px', alt='')
+                strong Debunking TED  
+                p
+                  | As TED has grown, we've picked up a few misconceptions along the way — some more vexing than others. If you've heard a rumor and want to know the facts, or have your own questions about who the heck we are and how we operate, we have a few answers below.
+              .spacer  
+              .block
+                img(src='images/logo4.jpg', height='56 px', width='96 px', alt='')
+                strong Who we are 
+                p
+                  | TED is a global community — and so is our staff. We're headquartered in New York and Vancouver, but the collaborative and global nature of our work means we have staffers, advisors and volunteers worldwide.
+              .block
+                img(src='images/logo5.jpg', height='56 px', width='96 px', alt='')
+                strong Jobs at TED 
+                p
+                  | Inside the TED organization, we create the TED Talks video series, the globe-spanning TED Fellows program, the TED-Ed movement to support learners of all ages, and many more idea-driven ideas and initiatives. And it's all powered by our world-class technology, administrative and partnerships teams.
+                a(href='https://jobs.jobvite.com/ted') see available jobs
+              .block.last
+                img(src='images/logo6.jpg', height='56 px', width='96 px', alt='')
+                strong Privacy Policy 
+                p
+                  | ED is a global community, welcoming people from every discipline and culture who seek a deeper understanding of the world. While gathering information about the people who use the TED site, our apps, platforms and related sites (collectively referred to as “TED”), we take your privacy very seriously, and make every effort to safeguard your personal data.
+          // ###########
+          #tabs-2.tabcontainer
+            h2.title Latest TED Talks Videos
+            ul.line.clear
+              li
+                .imgholder
+                  iframe(width='280', height='160', src='https://www.youtube.com/embed/At5app1G8To', frameborder='0', allowfullscreen='')
+                p.name  If a story moves you, you should act on it. 
+                p.readmore
+                  a(href='https://www.ted.com/talks/sisonke_msimang_if_a_story_moves_you_act_on_it') View This TED Talk »
+              li
+                .imgholder
+                  iframe(width='280', height='160', src='https://www.youtube.com/embed/k7zwfTn1CCE', frameborder='0', allowfullscreen='')
+                p.name
+                  | To solve old problems, study new species
+                p.readmore
+                  a(href='https://www.ted.com/talks/alejandro_sanchez_alvarado_to_solve_old_problems_study_new_species') View This TED Talk »
+              li.last
+                .imgholder
+                  iframe(width='280', height='160', src='https://www.youtube.com/embed/OGQ7Ud2xAUU', frameborder='0', allowfullscreen='')
+                p.name Meet the inventor of the electronic spreadsheet
+                p.readmore
+                  a(href='https://www.ted.com/talks/dan_bricklin_meet_the_inventor_of_the_electronic_spreadsheet') View This TED Talk »
+          // ###########
+          #tabs-3.tabcontainer
+            #hpage_portfolio.clear
+              .fl_left
+                #portfolioslider
+                  ul
+                    li
+                      img(src='images/e2.jpg', alt='')
+                    li
+                      img(src='images/e3.jpg', alt='')
+                    li
+                      img(src='images/e5.jpg', alt='')
+                    li
+                      img(src='images/e6.png', alt='')
+                    li
+                      img(src='images/e9.jpg', alt='')
+              .fl_right
+                h2 TED : Our Profile
+                p
+                  | TED is a nonprofit devoted to spreading ideas, usually in the form of short, powerful talks (18 minutes or less). TED began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all topics — from science to business to global issues — in more than 100 languages. Meanwhile, independently run TEDx events help share ideas in communities around the world.
+                ul
+                  li
+                    | TED began in 1984 as a conference where Technology, Entertainment and Design converged,
+                  li
+                    | and today covers almost all topics — from science to business to global issues — in more than 100 languages.
+                  li
+                    | Meanwhile, independently run TEDx events help share ideas in communities around the world.
+                p
+                  | TED is a global community, welcoming people from every discipline and culture who seek a deeper understanding of the world.
+                p.readmore
+                  a(href='pages/style-demo.html') View Lists of TED Talks »
+          // ###########
+          #tabs-4.tabcontainer
+            h2 Our Mission: Spread ideas
+            p
+              | TED is a global community, welcoming people from every discipline and culture who seek a deeper understanding of the world. We believe passionately in the power of ideas to change attitudes, lives and, ultimately, the world. On TED.com, we're building a clearinghouse of free knowledge from the world's most inspired thinkers — and a community of curious souls to engage with ideas and each other, both online and at TED and TEDx events around the world, all year long.
+            p
+              | AIn fact, everything we do — from our Conferences to our TED Talks to the projects sparked by the TED Prize, from the global TEDx community to the TED-Ed lesson series — is driven by this goal: How can we best spread great ideas?
+            p
+              | TED is owned by a nonprofit, nonpartisan foundation. Our agenda is to make great ideas accessible and spark conversation.
+          // ###########
+          // ###########
+        // #######################################################################################################
+    // #######################################################################################################
+    // #######################################################################################################
+    .wrapper
+      #footer.clear
+        .footbox
+          h2
+            | About Us 
+            img(src='images/logo.png', height='50px', width='180 px', a='', href='index.html')
+          p
+            | TED is a nonprofit devoted to spreading ideas, usually in the form of short, powerful talks (18 minutes or less). TED began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all topics
+          p
+            | from science to business to global issues  in more than 100 languages. Meanwhile, independently run TEDx events help share ideas in communities around the world.
+        .footbox
+          h2 Programs & Initiatives 
+          ul
+            li
+              a(href='https://www.ted.com/about/programs-initiatives/tedx-program') TEDx
+            li
+              a(href='https://www.ted.com/about/programs-initiatives/ted-prize') TED Prize
+            li
+              a(href='https://www.ted.com/about/programs-initiatives/ted-fellows-program') TED Fellows 
+            li
+              a(href='https://www.ted.com/about/programs-initiatives/ted-ed') TED Ed
+            li
+              a(href='https://www.ted.com/about/programs-initiatives/ted-translators') TED Translators
+            li
+              a(href='https://www.ted.com/about/programs-initiatives/ted-books') TED Booksc
+            li.last
+              a(href='https://www.ted.com/about/programs-initiatives/ted-institute') TED Institutes
+        .footbox
+          h2 Ways to get TED
+          ul
+            li
+              a(href='http://www.npr.org/programs/ted-radio-hour/') TED Radio Hour on NPR
+            li.last
+              a(href='https://www.ted.com/about/programs-initiatives/ted-talks/ways-to-get-ted-talks') More ways to get TED
+        .footbox.last
+          h2 Keep in Touch
+          ul
+            li
+              a(href='https://www.facebook.com/TED') Check out our Facebook page
+            li
+              a(href='https://twitter.com/tedtalks') Get the latest Tweets
+            li
+              a(href='https://www.pinterest.com/tednews/') Pinterest
+            li
+              a(href='https://www.instagram.com/ted/') View our Instagram profile
+          h2 Contact Us
+          ul
+            li
+              strong.title Tel:
+              br
+              |           212.346.9333
+            li
+              strong.title Fax:
+              br
+              |           718.744.2142
+            li
+              strong.title Email:
+              br
+              | registration@ted.com
+    // #######################################################################################################
+    .wrapper
+      #copyright.clear
+        p.fl_left
+          | Copyright © 2016 - All Rights Reserved - 
+          a(href='#') TOP TED TALKS
+        p.fl_right
+          | Created by 
+          a(target='_blank', href='http://coen3463-m1t8.herokuapp.com/') Jocelle L. Tanqui-on & Jobelle H. San Juan
