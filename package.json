@@ -14,5 +14,17 @@
     "mongodb": "^2.2.19",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0"
-  }
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jobellesj/coen3463-m3t8.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jobellesj/coen3463-m3t8/issues"
+  },
+  "homepage": "https://github.com/jobellesj/coen3463-m3t8#readme",
+  "description": ""
 }
