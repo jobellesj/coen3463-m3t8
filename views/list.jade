@@ -42,14 +42,14 @@ html(xmlns='http://www.w3.org/1999/xhtml')
               p Category: #{list.category}
               p Number of Views: #{list.views}
               p Number of Likes: #{list.likes}
-
-
-              a(href= '/tedtalks/' + list._id + '/edit')
-                | Update
               br
+              center
+                a(href= '/tedtalks/' + list._id + '/edit')
+                  | Update
               br
-              a(href='/tedtalks/' + list._id + '/delete')
-                | Delete
+              center
+                a(href='/tedtalks/' + list._id + '/delete')
+                  | Delete
             br
             br
             #comments
