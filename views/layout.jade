@@ -1,7 +1,36 @@
-doctype html
-html
+doctype transitional
+//
+  Template Name: PhotoFolio
+  Author: <a href="http://www.os-templates.com/">OS Templates</a>
+  Author URI: http://www.os-templates.com/
+  Licence: Free to use under our free template licence terms
+  Licence URI: http://www.os-templates.com/template-terms
+html(xmlns='http://www.w3.org/1999/xhtml')
   head
-    title Ted Talks
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    title TOP TED TALKS| List of TED Talks
+    meta(http-equiv='Content-Type', content='text/html; charset=iso-8859-1')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='stylesheets/materialize.css', type='text/css', rel='stylesheet', media='screen,projection')
+    link(rel='stylesheet', href='/stylesheets/layout.css', type='text/css')
+  body#top
+    .wrapper.col1
+      #header.clear
+        .fl_left
+          h1
+            img(href='index', src='/images/logo.png', height='50px', width='180 px', a='')
+            p(style='font-family:arial;') Ideas Worth Spreading
+    // #######################################################################################################
+    .wrapper.col1
+      #topbar.clear
+        ul#topnav
+          li
+            a(href='index') Home
+          li.active
+            a(href='tedtalkslist') List of TED Talks
+          li
+            a(href='tedtalks') Add New
+          li.last
+            a(href='gallery') Category Gallery
+
+
+    
