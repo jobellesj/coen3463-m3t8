@@ -9,6 +9,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
   head
     title TOP TED TALKS| List of TED Talks
     meta(http-equiv='Content-Type', content='text/html; charset=iso-8859-1')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/stylesheets/materialize.css', type='text/css', rel='stylesheet', media='screen,projection')
     link(rel='stylesheet', href='/stylesheets/layout.css', type='text/css')
   body#top
     .wrapper.col1
@@ -17,10 +19,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           h1
 
             img(src='/images/logo.png', height='50px', width='180 px', a='', href='/index')
-            p(style='font-family:arial;') Ideas Worth Spreading
-
-        .fl_right
-        
+            p(style='font-family:arial;') Ideas Worth Spreading 
 
     // #######################################################################################################
     .wrapper.col1
@@ -28,7 +27,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
         ul#topnav
           li
             a(href='/index') Home
-          li.active
+          li
             a(href='/tedtalkslist') List of TED Talks
           li
             a(href='/tedtalks') Add New
@@ -38,51 +37,57 @@ html(xmlns='http://www.w3.org/1999/xhtml')
     .wrapper.col2
       #container.clear
         // #######################################################################################################
-        #content
-          h1 TED Talks | Top Lists
-          #demo
-          .center
-            h1 Update This Entry
-              form(method="POST", action='/tedtalks/' + list._id)
-                p
-                  span.label(style='font-size:15px') Title:
-                    input(type="text", placeholder="Title", name="title", required='', aria-required='true', value=list.title)
-                p
-                  span.label(style='font-size:15px') Uploader Name:
-                    input(type="text", placeholder="Uploader Name", name="uploader_name", required='', aria-required='true', value=list.uploader_name)
-                p
-                  span.label(style='font-size:15px') Youtube Page:
-                    input(type="text", placeholder="Youtube Page", name="youtube_page", required='', aria-required='true', value=list.youtube_page)
-                p
-                  span.label(style='font-size:15px') Youtube Link:
-                    input(type="text", placeholder="Youtube Link", name="youtube_link", required='', aria-required='true', value=list.youtube_link)  
-                p
-                  span.label(style='font-size:15px') Desciption:
-                    input(type="text", placeholder="Description", name="description", required='', aria-required='true', value=list.description)
-                p
-                  span.label(style='font-size:15px') Publish Date:
-                    input(type="text", placeholder="Publish Date", name="pub_date", required='', aria-required='true', value=list.pub_date)
-                p
-                  span.label(style='font-size:15px') Category:
-                    input(type="text", placeholder="Category", name="category", required='', aria-required='true', value=list.category)
-                p
-                  span.label(style='font-size:15px') Number of Views:
-                    input(type="text", placeholder="Number of Views", name="views", required='', aria-required='true', value=list.views)
-                p
-                  span.label(style='font-size:15px') Number of Likes:
-                    input(type="text", placeholder="Number of Likes", name="likes", required='', aria-required='true', value=list.likes)
-                p
-                  span.label(style='font-size:15px') Embed Video:
-                    input(type="text", placeholder="Embedded Video", name="embedded", value=list.embedded, alt="no video")
-      
-                button(type="submit") Submit
-            br
-            br
-
-          
-          
-
-
+      center
+        h1 Update This Entry
+        br
+        br
+        .container
+          .row
+            form.col.s12(method="POST", action='/tedtalks/' + list._id)
+              .row
+                .form-group.col.s6
+                  label Title
+                  input.form-control(type='text', name='title', required='', aria-required='true', value=list.title)
+                  br
+                .form-group.col.s6
+                  label Uploader Name
+                  input.form-control(type='text', name='uploader_name', required='', aria-required='true', value=list.uploader_name)
+                  br
+                .form-group.col.s6
+                  label Youtube Page
+                  input.form-control(type='text', name='youtube_page', required='', aria-required='true', value=list.youtube_page)
+                  br
+                .form-group.col.s6
+                  label Youtube Link
+                  input.form-control(type='text', name='youtube_link', required='', aria-required='true', value=list.youtube_link)
+                  br
+                .form-group.col.s6
+                  label Description
+                  input.form-control(type='text', name='description', required='', aria-required='true', value=list.description)
+                  br
+                .form-group.col.s6
+                  label Published Date
+                  input.form-control(type='text', name='pub_date', required='', aria-required='true', value=list.pub_date)
+                  br
+                .form-group.col.s6
+                  label Category
+                  input.form-control(type='text', name='category', required='', aria-required='true', value=list.category)
+                  br
+                .form-group.col.s6
+                  label Number of Views
+                  input.form-control(type='text', name='views', required='', aria-required='true', value=list.views)
+                  br
+                .form-group.col.s6
+                  label Number of Likes
+                  input.form-control(type='text', name='likes', required='', aria-required='true', value=list.likes)
+                  br
+                .form-group.col.s6
+                  label Embedded Link 
+                  input.form-control(type='text', name='embedded', value=list.embedded)
+                  br
+                button.btn.waves-effect.waves-light.red(type='submit')
+                  | Submit 
+                  i.material-icons.right
       // #######################################################################################################
     // #######################################################################################################
     .wrapper
@@ -153,3 +158,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
         p.fl_right
           | Created by :
           a(target='_blank', href='http://coen3463-m1t8.herokuapp.com/') Jocelle L. Tanqui-on & Jobelle H. San Juan
+
+  Scripts
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(src='javascripts/materialize.js')
+    script(src='javascripts/init.js')

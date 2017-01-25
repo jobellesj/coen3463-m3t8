@@ -141,3 +141,34 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #copyright{padding:15px 0; border-top:1px solid #333333;}
 #copyright p{margin:0; padding:0;}
 #copyright, #copyright a{color:#666666; background-color:#161616;}
+
+/* label color */
+   .form-group label {
+     color: #000;
+     font-size: 13px;
+   }
+   /* label focus color */
+
+   /* label underline focus color */
+   .form-group input[type=text]:focus {
+     border-bottom: 1px solid #f44336;
+     box-shadow: 0 1px 0 0 #f44336;
+   }
+
+   .form-group input {
+   	font-size: 15px;
+   }
+
+   .form-group input.value {
+   	font-size: 15px;
+   }
+  
+   /* icon prefix focus color */
+   .form-group .prefix.active {
+     color: #f44336;
+   }
+
+   .form-group {
+   	height: 90px;
+   }
+
