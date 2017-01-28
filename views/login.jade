@@ -1,0 +1,52 @@
+doctype transitional
+//
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    link(rel='stylesheet', href='stylesheets/login.css', type='text/css')
+    // tabs
+  body
+    .form
+      ul.tab-group
+        li.tab.active
+          a(href='#login') Log In
+        li.tab
+          a(href='#signup') Sign Up
+      .tab-content
+        #login
+          h2 Welcome Back!
+          form(action='/', method='post')
+            .field-wrap
+              label
+                | Username
+                span.req *
+              input(type='email', required='', autocomplete='off')
+            .field-wrap
+              label
+                | Password
+                span.req *
+              input(type='password', required='', autocomplete='off')
+            button.button.button-block Log In
+        #signup
+          h2 Sign Up for Free
+          form(action='/', method='post')
+            .top-row
+            .field-wrap
+              label
+                | Username
+                span.req *
+              input(type='email', required='', autocomplete='off')
+            .field-wrap
+              label
+                | Set A Password
+                span.req *
+              input(type='password', required='', autocomplete='off')
+            .field-wrap
+              label
+               | Confirm Password
+               span.req *
+              input(type='password', required='', autocomplete='off')
+            button.button.button-block(type='submit') Get Started
+      // tab-content
+    // /form  
+    script(type='text/javascript', src='/javascripts/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/login.js')
