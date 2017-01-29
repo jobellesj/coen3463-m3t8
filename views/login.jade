@@ -2,6 +2,7 @@ doctype transitional
 //
 html(xmlns='http://www.w3.org/1999/xhtml')
   head
+    title TOP TED TALKS | LOG IN
     link(rel='stylesheet', href='stylesheets/login.css', type='text/css')
     // tabs
   body
@@ -13,28 +14,38 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           a(href='#signup') Sign Up
       .tab-content
         #login
-          h2 Welcome Back!
-          form(action='/', method='post')
-            .field-wrap
-              label
-                | Username
-                span.req *
-              input(type='email', required='', autocomplete='off')
-            .field-wrap
-              label
-                | Password
-                span.req *
-              input(type='password', required='', autocomplete='off')
-            button.button.button-block Log In
+          form(action='/login', method='post')
+            h2 Welcome Back!
+              .field-wrap
+                label
+                  | Username
+                  span.req *
+                input(type='email', required='', autocomplete='off')
+              .field-wrap
+                label
+                  | Password
+                  span.req *
+                input(type='password', required='', autocomplete='off')
+              button.button.button-block(type='submit') Log In
         #signup
           h2 Sign Up for Free
-          form(action='/', method='post')
+          form(action='/signup', method='post')
             .top-row
             .field-wrap
               label
                 | Username
                 span.req *
-              input(type='email', required='', autocomplete='off')
+              input(type='text', required='', autocomplete='off')
+            .field-wrap
+              label
+                | Firstname
+                span.req *
+              input(type='text', required='', autocomplete='off')
+            .field-wrap
+              label
+                | Lastname
+                span.req *
+              input(type='text', required='', autocomplete='off')
             .field-wrap
               label
                 | Set A Password

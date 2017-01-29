@@ -42,63 +42,132 @@ app.get('/list:listId', function(req, res){
   res.render('list')
 });
 
+app.get('/login', function(req, res, next) {
+    res.render('login', {
+            
+        });
+});
+
+
 app.get('/tedtalks', function(req, res) {
-       
+  tedtalksCollection.find()
+    .then(function(tedtalks) {
+        res.render('tedtalks', {
+            tedtalks: tedtalks
+        });
     });
+});
 
 
 app.get('/tedtalkslist', function(req, res) {
-    
-  });
-
-    app.post('/tedtalks', function(req, res) {
-        console.log(req.body);
-        var dataToSave = {
-            title: req.body.title,
-            uploader_name: req.body.uploader_name,
-            youtube_page: req.body.youtube_page,
-            youtube_link: req.body.youtube_link,
-            description: req.body.description,
-            pub_date: req.body.pub_date,
-            category: req.body.category,
-            views: req.body.views,
-            likes: req.body.likes,
-            embedded: req.body.embedded,
-            creation_date: Date.now(),
-            last_update: Date.now()
-        };
-
-    app.get('/list/:listId', function(req, res) {
-        var listId = req.params.listId;
-    });
-
-    app.get('/tedtalks/:listId/edit', function(req, res) {
-        var listId = req.params.listId;
-    });
-
-    app.post('/tedtalks/:listId', function(req, res, next) {
-
-       var listId = req.params.listId;
-
-      var dataToSave = {
-            title: req.body.title,
-            uploader_name: req.body.uploader_name,
-            youtube_page: req.body.youtube_page,
-            youtube_link: req.body.youtube_link,
-            description: req.body.description,
-            pub_date: req.body.pub_date,
-            category: req.body.category,
-            views: req.body.views,
-            likes: req.body.likes,
-            embedded: req.body.embedded,
-            creation_date: Date.now(),
-            last_update: Date.now()
-      };
+    tedtalksCollection.find()
+    .then(function(tedtalks) {
+        res.render('tedtalkslist', {
+          lists: tedtalks
       });
+    });
+});
 
-    app.get('/tedtalks/:listId/delete', function(req, res) {
-        var listId = req.params.listId;
+app.post('/tedtalks', function(req, res) {
+  console.log(req.body);
+  var dataToSave = {
+      title: req.body.title,
+      uploader_name: req.body.uploader_name,
+      youtube_page: req.body.youtube_page,
+      youtube_link: req.body.youtube_link,
+      description: req.body.description,
+      pub_date: req.body.pub_date,
+      category: req.body.category,
+      views: req.body.views,
+      likes: req.body.likes,
+      embedded: req.body.embedded,
+      creation_date: Date.now(),
+      last_update: Date.now()
+  };
+  var tedtalks = new tedtalksCollection(dataToSave);
+  tedtalks.save(function(err){
+      if(!err){
+        console.log("Saving Data Successfull!");
+        res.redirect('/tedtalks');
+      }
+      else
+      {
+        console.log('Saving Data Failed!');
+        return;
+      }
   });
+});    
+
+app.get('/list/:listId', function(req, res) {
+  var listId = req.params.listId;
+  tedtalksCollection.findOne({_id: listId}, function (err, tedtalks){
+    if (!err) {
+      res.render('list', {
+          list: list
+      });
+    }
+  });
+});
+
+app.get('/tedtalks/:listId/edit', function(req, res) {
+  var listId = req.params.listId;
+  tedtalksCollection.findOne({_id: listId}, function (err, tedtalks){
+    if (!err) {
+      console.log('tedtalks loaded', tedtalks);
+      res.render('update', {
+          list: tedtalks
+      });
+    }
+    else {
+      res.end(err);
+    }
+  });
+});
+
+app.post('/tedtalks/:listId', function(req, res, next) {
+
+  var listId = req.params.listId;
+
+  var dataToSave = {
+    title: req.body.title,
+    uploader_name: req.body.uploader_name,
+    youtube_page: req.body.youtube_page,
+    youtube_link: req.body.youtube_link,
+    description: req.body.description,
+    pub_date: req.body.pub_date,
+    category: req.body.category,
+    views: req.body.views,
+    likes: req.body.likes,
+    embedded: req.body.embedded,
+    creation_date: Date.now(),
+    last_update: Date.now()
+  };
+  var tedtalks = new tedtalksCollection(dataToSave);
+  tedtalks.save(function(err){
+      if(!err){
+        console.log("Saving Data Successfull!");
+        res.redirect('/list/' + listId);
+      }
+      else
+      {
+        console.log('Saving Data Failed!');
+        return;
+      }
+  });
+});
+
+app.get('/tedtalks/:listId/delete', function(req, res) {
+  var listId = req.params.listId;
+  tedtalksCollection.remove({_id: listId}, function(err){
+    if(!err){
+      console.log('Item Deleted!');
+      res.redirect('/tedtalkslist')
+    }
+    else {
+      console.log('Item not deleted!');
+    }
+  });
+});
 
 
 
@@ -120,6 +189,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-});
+
 
 module.exports = app;

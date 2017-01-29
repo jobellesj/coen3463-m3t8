@@ -9,7 +9,7 @@ var tedtalksSchema = new Schema
         youtube_page: {type: String, required: true},
         youtube_link: {type: String, required: true},
         description: {type: String},
-        pub_date: {type: Data},
+        pub_date: {type: Date},
         category: {type: String},
         likes: {type: Number},
         embedded: {type: String},
