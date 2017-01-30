@@ -159,6 +159,10 @@ textarea {
   margin: 0;
 }
 
+.log {
+  float:right !important;
+}
+
 .button {
   border: 0;
   outline: none;
@@ -187,3 +191,4 @@ textarea {
   margin-top: -20px;
   text-align: right;
 }
+

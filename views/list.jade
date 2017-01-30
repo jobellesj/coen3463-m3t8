@@ -32,8 +32,12 @@ html(xmlns='http://www.w3.org/1999/xhtml')
             a(href='/tedtalkslist') List of TED Talks
           li
             a(href='/tedtalks') Add New
-          li.last
+          li
             a(href='/gallery') Category Gallery
+          li.last
+            form(action='/logout', method='post')
+              button.btn.btn-labeled.btn-default.ripple(type='button')
+                |  Log out
     // #######################################################################################################
     .wrapper.col2
       #container.clear

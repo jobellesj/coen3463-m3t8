@@ -20,12 +20,12 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                 label
                   | Username
                   span.req *
-                input(type='email', required='', autocomplete='off')
+                input(name='username', type='text', required='', autocomplete='off')
               .field-wrap
                 label
                   | Password
                   span.req *
-                input(type='password', required='', autocomplete='off')
+                input(name='password', type='password', required='', autocomplete='off')
               button.button.button-block(type='submit') Log In
         #signup
           h2 Sign Up for Free
@@ -35,27 +35,27 @@ html(xmlns='http://www.w3.org/1999/xhtml')
               label
                 | Username
                 span.req *
-              input(type='text', required='', autocomplete='off')
+              input(name='username', type='text', required='', autocomplete='off')
             .field-wrap
               label
                 | Firstname
                 span.req *
-              input(type='text', required='', autocomplete='off')
+              input(name='firstName', type='text', required='', autocomplete='off')
             .field-wrap
               label
                 | Lastname
                 span.req *
-              input(type='text', required='', autocomplete='off')
+              input(name='lastName', type='text', required='', autocomplete='off')
             .field-wrap
               label
                 | Set A Password
                 span.req *
-              input(type='password', required='', autocomplete='off')
+              input(name='password', type='password', required='', autocomplete='off')
             .field-wrap
               label
                | Confirm Password
                span.req *
-              input(type='password', required='', autocomplete='off')
+              input(name='confirmPassword', type='password', required='', autocomplete='off')
             button.button.button-block(type='submit') Get Started
       // tab-content
     // /form  

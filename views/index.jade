@@ -53,8 +53,11 @@ html(xmlns='http://www.w3.org/1999/xhtml')
             a(href='tedtalkslist') List of TED Talks
           li
             a(href='tedtalks') Add New 
-          li.last
+          li
             a(href='gallery') Category Gallery
+          li.last
+            form(action='/logout', method='post')
+              button.button.button-block(type='submit') Log Out
     center
       img(src='./images/banner2.jpg')
     br
