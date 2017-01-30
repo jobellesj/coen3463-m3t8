@@ -131,8 +131,6 @@ app.get('/tedtalkslist', function(req, res) {
             views: req.body.views,
             likes: req.body.likes,
             embedded: req.body.embedded,
-            creation_date: Date.now(),
-            last_update: Date.now()
         };
 
         db.collection('tedtalks')
@@ -182,8 +180,6 @@ app.get('/tedtalkslist', function(req, res) {
             views: req.body.views,
             likes: req.body.likes,
             embedded: req.body.embedded,
-            creation_date: Date.now(),
-            last_update: Date.now()
       };
         db.collection('tedtalks').updateOne({_id: new ObjectId(listId)}, {$set: dataToSave}, function(err, result) {
           if (err) {

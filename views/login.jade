@@ -15,6 +15,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
       .tab-content
         #login
           form(action='/users/login', method='post')
+            if (loginError)
+              h6(style='font-size:15px', font-color:'#f44336') = loginError
             h2 Welcome Back!
               .field-wrap
                 label
@@ -29,35 +31,38 @@ html(xmlns='http://www.w3.org/1999/xhtml')
               button.button.button-block(type='submit') Log In
         #signup
           h2 Sign Up for Free
-          form(action='/users/register', method='post')
+          form(action='/users/register', method='post', onsubmit='return validation()')
+            if (status)
+              h6(style='font-size:15px') = status
             .top-row
             .field-wrap
               label
-                | Name
+                | First Name
                 span.req *
-              input(type='text', required='', autocomplete='off', name='name')
+              input(type='text', required='', autocomplete='off', name='first_name', id='first_name')
+            .field-wrap
+              label
+                | Last Name
+                span.req *
+              input(type='text', required='', autocomplete='off', name='last_name', id='last_name')
             .field-wrap
               label
                 | Username
                 span.req *
-              input(type='text', required='', autocomplete='off', name='username')
+              input(type='text', required='', autocomplete='off', name='username', id='username')
             .field-wrap
               label
                 | Email
                 span.req *
-              input(type='email', required='', autocomplete='off', name='email')
+              input(type='email', required='', autocomplete='off', name='email', id='email')
             .field-wrap
               label
                 | Set A Password
                 span.req *
-              input(type='password', required='', autocomplete='off', name='password')
-            .field-wrap
-              label
-               | Confirm Password
-               span.req *
-              input(type='password', required='', autocomplete='off', name='password2')
+              input(type='password', required='', autocomplete='off', name='password', id='password')
             button.button.button-block(type='submit') Get Started
       // tab-content
     // /form  
     script(type='text/javascript', src='/javascripts/jquery.min.js')
     script(type='text/javascript', src='/javascripts/login.js')
+    script(type='text/javascript', src='/javascripts/validate.js')
