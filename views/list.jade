@@ -35,9 +35,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           li
             a(href='/gallery') Category Gallery
           li.last
-            form(action='/logout', method='post')
-              button.btn.btn-labeled.btn-default.ripple(type='button')
-                |  Log out
+            a(href='/users/logout') Logout
     // #######################################################################################################
     .wrapper.col2
       #container.clear
@@ -82,6 +80,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                   tr
                     td Number of Likes: 
                     td #{list.likes}
+              br      
               br
               center
                 a.btn.waves-effect.waves-light(href='/tedtalks/' + list._id + '/edit') Edit

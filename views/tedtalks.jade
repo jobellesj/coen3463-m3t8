@@ -1,6 +1,43 @@
-extends layout
+doctype transitional
+//
+  Template Name: PhotoFolio
+  Author: <a href="http://www.os-templates.com/">OS Templates</a>
+  Author URI: http://www.os-templates.com/
+  Licence: Free to use under our free template licence terms
+  Licence URI: http://www.os-templates.com/template-terms
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    title TOP TED TALKS| List of TED Talks
+    meta(http-equiv='Content-Type', content='text/html; charset=iso-8859-1')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/stylesheets/materialize.css', type='text/css', rel='stylesheet', media='screen,projection')
+    link(rel='stylesheet', href='/stylesheets/layout.css', type='text/css')
+  body#top
+    .wrapper.col1
+      #header.clear
+        .fl_left
+          h1
+            img(href='/index', src='/images/logo.png', height='50px', width='180 px', a='')
+            p(style='font-family:arial;') Ideas Worth Spreading
 
-block content
+    // #######################################################################################################
+    .wrapper.col1
+      #topbar.clear
+        ul#topnav
+          li
+            a(href='/index') Home
+          li
+            a(href='/tedtalkslist') List of TED Talks
+          li
+            a(href='/tedtalks') Add New
+          li
+            a(href='/gallery') Category Gallery
+          li.last
+            a(href='/users/logout') Logout
+    // #######################################################################################################
+    .wrapper.col2
+      #container.clear
+        // #######################################################################################################
   
     // #######################################################################################################
     .wrapper.col2
@@ -14,49 +51,123 @@ block content
           .row
             form.col.s12(method='POST', action='/tedtalks')
               .row
-                .form-group.col.s6
+                .form-group.col.s12.m12.l6
                   label Title
                   input.form-control(type='text', name='title', placeholder='Do schools kill creativity?', required='', aria-required='true')
                   br
-                .form-group.col.s6
+                .form-group.col.s12.m12.l6
                   label Uploader Name
                   input.form-control(type='text', name='uploader_name', placeholder='Tedtalks', required='', aria-required='true')
                   br
-                .form-group.col.s6
+                .form-group.col.s12.m12.l6
                   label Youtube Page
                   input.form-control(type='text', name='youtube_page', placeholder='https://www.youtube.com/playlist?list=PL70DEC2B0568B5469', required='', aria-required='true')
                   br
-                .form-group.col.s6
+                .form-group.col.s12.m12.l6
                   label Youtube Link
                   input.form-control(type='text', name='youtube_link', placeholder='https://www.youtube.com/watch?v=iG9CE55wbtY&index=1&list=PL70DEC2B0568B5469&t=1s', required='', aria-required='true')
                   br
-                .form-group.col.s6
+                .form-group.col.s12.m12.l6
                   label Description
                   input.form-control(type='text', name='description', placeholder='Sir Ken Robinson makes an entertaining and profoundly moving case for creating an education system that nurtures (rather than undermines) creativity.', required='', aria-required='true')
                   br
-                .form-group.col.s6
+                .form-group.col.s12.m12.l6
                   label Published Date
                   input.form-control(type='text', name='pub_date', placeholder='Jan 6, 2007', required='', aria-required='true')
                   br
-                .form-group.col.s6
+                .form-group.col.s12.m12.l6
                   label Category
                   input.form-control(type='text', name='category', placeholder='Education', required='', aria-required='true')
                   br
-                .form-group.col.s6
+                .form-group.col.s12.m12.l6
                   label Number of Views
                   input.form-control(type='text', name='views', placeholder='11,576,537 views', required='', aria-required='true')
                   br
-                .form-group.col.s6
+                .form-group.col.s12.m12.l6
                   label Number of Likes
                   input.form-control(type='text', name='likes', placeholder='109,462 likes', required='', aria-required='true')
                   br
-                .form-group.col.s6
+                .form-group.col.s12.m12.l6
                   label Embedded Link 
                   input.form-control(type='text', name='embedded', placeholder='https://www.youtube.com/embed/iG9CE55wbtY?list=PL70DEC2B0568B5469')
                 br
                 button.btn.waves-effect.waves-light.red(type='submit')
                   | Submit 
                   i.material-icons.right
+      // #######################################################################################################
+    // #######################################################################################################
+    .wrapper
+      #footer.clear
+        .footbox
+          h2
+            | About Us 
+            img(src='/images/logo.png', height='50px', width='180 px', a='', href='index.html')
+          p
+            | TED is a nonprofit devoted to spreading ideas, usually in the form of short, powerful talks (18 minutes or less). TED began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all topics
+          p
+            | from science to business to global issues  in more than 100 languages. Meanwhile, independently run TEDx events help share ideas in communities around the world.
+        .footbox
+          h2 Programs & Initiatives 
+          ul
+            li
+              a(href='https://www.ted.com/about/programs-initiatives/tedx-program') TEDx
+            li
+              a(href='https://www.ted.com/about/programs-initiatives/ted-prize') TED Prize
+            li
+              a(href='https://www.ted.com/about/programs-initiatives/ted-fellows-program') TED Fellows 
+            li
+              a(href='https://www.ted.com/about/programs-initiatives/ted-ed') TED Ed
+            li
+              a(href='https://www.ted.com/about/programs-initiatives/ted-translators') TED Translators
+            li
+              a(href='https://www.ted.com/about/programs-initiatives/ted-books') TED Booksc
+            li.last
+              a(href='https://www.ted.com/about/programs-initiatives/ted-institute') TED Institutes
+        .footbox
+          h2 Ways to get TED
+          ul
+            li
+              a(href='http://www.npr.org/programs/ted-radio-hour/') TED Radio Hour on NPR
+            li.last
+              a(href='https://www.ted.com/about/programs-initiatives/ted-talks/ways-to-get-ted-talks') More ways to get TED
+        .footbox.last
+          h2 Keep in Touch
+          ul
+            li
+              a(href='https://www.facebook.com/TED') Check out our Facebook page
+            li
+              a(href='https://twitter.com/tedtalks') Get the latest Tweets
+            li
+              a(href='https://www.pinterest.com/tednews/') Pinterest
+            li
+              a(href='https://www.instagram.com/ted/') View our Instagram profile
+          h2 Contact Us
+          ul
+            li
+              strong.title Tel:
+              br
+              |           212.346.9333
+            li
+              strong.title Fax:
+              br
+              |           718.744.2142
+            li
+              strong.title Email:
+              br
+              | registration@ted.com
+    // #######################################################################################################
+    .wrapper
+      #copyright.clear
+        p.fl_left
+          | Copyright © 2016 - All Rights Reserved - 
+          a(href='#') TOP TED TALKS
+        p.fl_right
+          | Created by :
+          a(target='_blank', href='http://coen3463-m1t8.herokuapp.com/') Jocelle L. Tanqui-on & Jobelle H. San Juan
+  Scripts
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(src='javascripts/materialize.js')
+    script(src='javascripts/init.js')
   
         
 

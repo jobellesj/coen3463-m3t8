@@ -13,8 +13,6 @@ var tedtalksSchema = new Schema
         category: {type: String},
         likes: {type: Number},
         embedded: {type: String},
-        creation_date: {type: Number},
-        last_update: {type: Number}
     },
     {
         collection: 'tedtalks'

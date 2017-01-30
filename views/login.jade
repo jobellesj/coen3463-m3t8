@@ -3,7 +3,7 @@ doctype transitional
 html(xmlns='http://www.w3.org/1999/xhtml')
   head
     title TOP TED TALKS | LOG IN
-    link(rel='stylesheet', href='stylesheets/login.css', type='text/css')
+    link(rel='stylesheet', href='/stylesheets/login.css', type='text/css')
     // tabs
   body
     .form
@@ -14,48 +14,48 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           a(href='#signup') Sign Up
       .tab-content
         #login
-          form(action='/login', method='post')
+          form(action='/users/login', method='post')
             h2 Welcome Back!
               .field-wrap
                 label
                   | Username
                   span.req *
-                input(name='username', type='text', required='', autocomplete='off')
+                input(type='text', required='', autocomplete='off', name='username')
               .field-wrap
                 label
                   | Password
                   span.req *
-                input(name='password', type='password', required='', autocomplete='off')
+                input(type='password', required='', autocomplete='off', name='password')
               button.button.button-block(type='submit') Log In
         #signup
           h2 Sign Up for Free
-          form(action='/signup', method='post')
+          form(action='/users/register', method='post')
             .top-row
+            .field-wrap
+              label
+                | Name
+                span.req *
+              input(type='text', required='', autocomplete='off', name='name')
             .field-wrap
               label
                 | Username
                 span.req *
-              input(name='username', type='text', required='', autocomplete='off')
+              input(type='text', required='', autocomplete='off', name='username')
             .field-wrap
               label
-                | Firstname
+                | Email
                 span.req *
-              input(name='firstName', type='text', required='', autocomplete='off')
-            .field-wrap
-              label
-                | Lastname
-                span.req *
-              input(name='lastName', type='text', required='', autocomplete='off')
+              input(type='email', required='', autocomplete='off', name='email')
             .field-wrap
               label
                 | Set A Password
                 span.req *
-              input(name='password', type='password', required='', autocomplete='off')
+              input(type='password', required='', autocomplete='off', name='password')
             .field-wrap
               label
                | Confirm Password
                span.req *
-              input(name='confirmPassword', type='password', required='', autocomplete='off')
+              input(type='password', required='', autocomplete='off', name='password2')
             button.button.button-block(type='submit') Get Started
       // tab-content
     // /form  
