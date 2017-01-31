@@ -33,7 +33,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           h2 Sign Up for Free
           form(action='/users/register', method='post', onsubmit='return validation()')
             if (status)
-              h6(style='font-size:15px') = status
+              h6(style='font-size:15px')= status
             .top-row
             .field-wrap
               label
