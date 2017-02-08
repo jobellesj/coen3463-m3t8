@@ -65,3 +65,14 @@ function checkUserName() {
     }
     return true; //good user input
 }
+
+if (window.location.pathname === '/tedtalkslist') {
+
+	fetch('api/v1/list/count').then(function(res){
+				res.json().then(function(count){
+					console.log('count', count)
+					var banner = document.getElementById('banner-description');
+					banner.innerHTML = 'There are ' + count.count + ' tutorials available to watch!';
+				});
+			});
+	}
